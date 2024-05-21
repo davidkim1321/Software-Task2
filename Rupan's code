@@ -31,7 +31,35 @@ class Enemy:
         self.XPdrop = XPdrop
         self.Itemdrop = Itemdrop
 
+class Siren(Enemy):
+    def show(self):
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
+
+Siren = Siren("siren", 50, "Enchanted songs", 0, 2, "Scales")
+Siren.show()
+
+class Manticore(Enemy):
+    def show(self):
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop a {}".format(self.Itemdrop))
         
+  
+x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
+x.show()
+ 
+
+
+
+
 class Hero(Entity):
     def show(self):
         print("I am {}".format(self.name))
@@ -74,7 +102,7 @@ class MainPlayer(Entity):
         print("{}".format(self.skill5))
     
     
-y = MainPlayer (f"Adonis", 55, 5, 6, 16, 7, 6, "Kick", 2, "skeleton bone", "Dodging", "Blocking", "Running", "Kicking", "Punching")
+z = MainPlayer (f"Adonis", 55, 5, 6, 16, 7, 6, "Kick", 2, "skeleton bone", "Dodging", "Blocking", "Running", "Kicking", "Punching")
 y.show()
 
 '''class Entity:
@@ -120,27 +148,7 @@ if __name__ == "__main__":
 
     dragon.attack(knight)
     knight.attack(dragon)
-    
 
-class MainPlayer(Entity):
-    def speak(self):
-        print('You are Adonis, a scrawny little boy.')
-    
-y = MainPlayer ("Adonis", 55, 5, "skeleton bone", "Dodge")
-y.speak()
-
-    
-class Manticore(Enemy):
-    def show(self):
-        print(f"I am a {self.name}, I have {self.health} health, My main attack is {self.mainattack}, I do {self.attackdamage} damage, I drop {self.XPdrop} XP and I drop {self.Itemdrop}")
-  
-x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
-x.show()
- 
-    
-class Siren(Enemy):
-    def speak(self):
-        print("An enchanting tune could be heard. It draws you in, every syllable rich in sound and flavour.")
     
 
 if __name__ == "__main__":
