@@ -56,8 +56,17 @@ class Manticore(Enemy):
 x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
 x.show()
  
+class Griffin(Enemy):
+    def show(self):
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
 
-
+Griffin = Griffin("griffin", 75, "Swoop", 4, 3, "Feathers")
+Griffin.show()
 
 
 class Hero(Entity):
