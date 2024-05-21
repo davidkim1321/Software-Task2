@@ -2,26 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 class Entity:
-    def __init__(self, name: str, health: int, strength: int, stamina: int, agility: int, intelligence: int, resistance: int, mainattack: str, attackdamage: int, weapon: str, skill1: str, skill2: str, skill3: str, skill4: str, skill5: str, XPdrop: int, Itemdrop: str):
-        self.name = name
-        self.health = health
-        self.strength = strength
-        self.stamina = stamina
-        self.agility = agility
-        self.intelligence = intelligence
-        self.resistance = resistance
-        self.mainattack = mainattack
-        self.attackdamage = attackdamage
-        self.is_alive = True
-        self.equipped_weapon = weapon
-        self.skills = [skill1,skill2,skill3,skill4,skill5]
-        self.XPdrop = XPdrop
-        self.Itemdrop = Itemdrop
-        
-
-        
-class Hero(Entity):
-    def __init__(self, name, health, strength, stamina, agility, intelligence, resistance, mainattack, attackdamage, weapon, skill1, skill2, skill3, skill4, skill5):
+    def __init__(self, name: str, health: int, strength: int, stamina: int, agility: int, intelligence: int, resistance: int, mainattack: str, attackdamage: int, weapon: str, skill1: str, skill2: str, skill3: str, skill4: str, skill5: str):
         self.name = name
         self.health = health
         self.strength = strength
@@ -38,7 +19,20 @@ class Hero(Entity):
         self.skill3 = skill3
         self.skill4 = skill4
         self.skill5 = skill5
+    
 
+class Enemy:
+    def __init__(self, name, health, mainattack, attackdamage, XPdrop, Itemdrop):
+        self.name = name
+        self.health = health
+        self.mainattack = mainattack
+        self.attackdamage = attackdamage
+        self.is_alive = True
+        self.XPdrop = XPdrop
+        self.Itemdrop = Itemdrop
+
+        
+class Hero(Entity):
     def show(self):
         print("I am {}".format(self.name))
         print("I have {} health".format(self.health))
@@ -58,6 +52,29 @@ class Hero(Entity):
         print("{}".format(self.skill5))
 
 y = Hero (f"Adam", 90, 18, 18, 18, 20, 16, "Stab", 8, "holy sword", "stabbing", "punching", "parrying", "blocking", "dodging")
+y.show()
+
+class MainPlayer(Entity):
+    def show(self):
+        print("I am {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("I have {} strength".format(self.strength))
+        print("I have {} stamina".format(self.stamina))
+        print("I have {} agility".format(self.agility))
+        print("I have {} intelligence".format(self.intelligence))
+        print("I have {} resistance".format(self.resistance))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I have a {}".format(self.weapon))
+        print("My skills include:")
+        print("{}".format(self.skill1))
+        print("{}".format(self.skill2))
+        print("{}".format(self.skill3))
+        print("{}".format(self.skill4))
+        print("{}".format(self.skill5))
+    
+    
+y = MainPlayer (f"Adonis", 55, 5, 6, 16, 7, 6, "Kick", 2, "skeleton bone", "Dodging", "Blocking", "Running", "Kicking", "Punching")
 y.show()
 
 '''class Entity:
@@ -113,30 +130,15 @@ y = MainPlayer ("Adonis", 55, 5, "skeleton bone", "Dodge")
 y.speak()
 
     
-        
-class Enemy(Entity):
+class Manticore(Enemy):
     def show(self):
-        print("I am {self.name}, I do {self.attack} damage, I have {self.health} health")
-        
-
-
-class Manticore(Entity):
-    def __init__(self, health, mainattack, attackdamage, XPdrop, Itemdrop):
-        self.health = health
-        self.mainattack = mainattack
-        self.attackdamage = attackdamage
-        self.is_alive = True
-        self.XPdrop = XPdrop
-        self.Itemdrop = Itemdrop
-
-    def show(self):
-        print(f"I am {self.name}, I have {self.health} health, My main attack is {self.mainattack}, I do {self.attackdamage} damage, I drop {self.XPdrop} XP and I drop {self.Itemdrop}")
+        print(f"I am a {self.name}, I have {self.health} health, My main attack is {self.mainattack}, I do {self.attackdamage} damage, I drop {self.XPdrop} XP and I drop {self.Itemdrop}")
   
-x = Manticore("Thorn", 85, "Poison Spike", 5, 5, "Poisonous Tail")
+x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
 x.show()
  
     
-class Siren(Entity):
+class Siren(Enemy):
     def speak(self):
         print("An enchanting tune could be heard. It draws you in, every syllable rich in sound and flavour.")
     
