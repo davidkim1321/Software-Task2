@@ -25,7 +25,8 @@ class Enemy(Entity):
         self.experience_drop = xp_drop
         self.item_drop = item_drop
 
-minotaur= Enemy('hi')
+minotaur= Enemy('Minotaur', 50, 10, 'sword' 'holy armour', '', 10, 'hide')
+print(minotaur.xp_drop)
 class Items:
     def __init__(self, attack, defence, health, strength, agility):
         self.attack = attack
