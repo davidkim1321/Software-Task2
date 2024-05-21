@@ -1,49 +1,27 @@
 class Entity:
-    def __init__(self, name: str, health: int, attack: int, e_weapon: str, e_armour:str, skills: str):
-        self.is_alive = True
+    def __init__(self, name: str, health: int, strength: int, stamina: int, agility: int, intelligence: int, resistance: int, mainattack: str, attackdamage: int, weapon: str, skill1: str, skill2: str, skill3: str, skill4: str, skill5: str, XPdrop: int, Itemdrop: str):
         self.name = name
         self.health = health
-        self.attack = attack
-        self.equipped_weapon = e_weapon
-        self.equipped_armour = e_armour
-        self.skills = skills
-
-hero = Entity('Adam', 100, 20, 'holy sword', 'holy armour')
-
-print(hero.name)
-
-class Player(Entity):
-    def __init__(self, strength: int, agility: int, level: int):
         self.strength = strength
-        self.agility = strength
-        self.inventory = []
-        self.level = 0
-        self.experience_gauge = 0
-
-class Enemy(Entity):
-    def __init__(self, xp_drop, item_drop):
-        self.experience_drop = xp_drop
-        self.item_drop = item_drop
-
-minotaur= Enemy('Minotaur', 50, 10, 'sword' 'holy armour', '', 10, 'hide')
-print(minotaur.xp_drop)
-class Items:
-    def __init__(self, attack, defence, health, strength, agility):
-        self.attack = attack
-        self.defence = defence
-        self.health = health
-        self.strength = strength
+        self.stamina = stamina
         self.agility = agility
-class weapon(Items):
-    def __init__(self, attack, strength, agility):
+        self.intelligence = intelligence
+        self.resistance = resistance
+        self.mainattack = mainattack
+        self.attackdamage = attackdamage
+        self.is_alive = True
+        self.equipped_weapon = weapon
+        self.skills = [skill1,skill2,skill3,skill4,skill5]
+    
+    skill1 = "Punch"
+    skill2 = "Dodge"
+    skill3 = "Block"
+    skill4 = "Parry"
+    skill5 = "Snipe"
 
+class Manticore(Entity):
+    def speak(self):
+        print("Growl...")
 
-
-class List_of_skills:
-    def __init__(self, attack):
-        self.attack = attack
-
-
-        
-
-
+x = Manticore ("Thorn", 5, 85)
+x.speak()  

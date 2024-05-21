@@ -30,8 +30,7 @@ class Enemy:
         self.is_alive = True
         self.XPdrop = XPdrop
         self.Itemdrop = Itemdrop
-
-class Siren(Enemy):
+    
     def show(self):
         print("I am a {}".format(self.name))
         print("I have {} health".format(self.health))
@@ -40,34 +39,153 @@ class Siren(Enemy):
         print("I drop {} XP".format(self.XPdrop))
         print("I drop {}".format(self.Itemdrop))
 
-Siren = Siren("siren", 50, "Enchanted songs", 0, 2, "Scales")
-Siren.show()
+class Siren(Enemy):
+    def show(self):
+        Siren = Siren("siren", 50, "Enchanted songs", 0, 2, "Scales")
+        Siren.show()
+         
 
 class Manticore(Enemy):
+    def show(self):    
+        x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
+        x.show()
+ 
+class Griffin(Enemy):
+    def show(self):
+        Griffin = Griffin("griffin", 75, "Swoop", 4, 3, "feathers")
+        Griffin.show()
+
+class Minotaur(Enemy):
     def show(self):
         print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop my {}".format(self.Itemdrop))
+
+Minotaur = Minotaur("minotaur", 95, "Gore Attack", 10, 6, "set of horns")
+Minotaur.show()
+
+class Gorgon(Enemy):
+    def show(self):
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is the {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop my {}".format(self.Itemdrop))
+
+Gorgon = Gorgon("gorgon", 90, "Stone Stare", 100, 6, "head")
+Gorgon.show()
+
+class Sphinx(Enemy):
+    def show(self):
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop my {}".format(self.Itemdrop))
+
+Sphinx = Sphinx("sphinx", 70, "Puzzles", 3, 3, "fangs")
+Sphinx.show()
+
+class Centaur(Enemy):
+    def show(self):
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
+
+Centaur = Centaur("sphinx", 65, "sniping arrows", 4, 2, "hooves and a crossbow")
+Centaur.show()
+
+class Cyclops(Enemy):
+    def show(self):
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
+
+Cyclops = Cyclops("cyclops", 85, "charging", 12, 6, "nothing")
+Cyclops.show()
+
+class Cerberus(Enemy):
+    def show(self):
+        print("I am {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop my {}".format(self.Itemdrop))
+
+Cerberus = Cerberus("Cerberus", 70, "mauling", 3, 4, "three heads")
+Cerberus.show()
+
+class Chimera(Enemy):
+    def show(self):
+        print("I am {}".format(self.name))
         print("I have {} health".format(self.health))
         print("My main attack is {}".format(self.mainattack))
         print("I do {} damage".format(self.attackdamage))
         print("I drop {} XP".format(self.XPdrop))
         print("I drop a {}".format(self.Itemdrop))
-        
-  
-x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
-x.show()
- 
-class Griffin(Enemy):
+
+Chimera = Chimera("chimera", 95, "breathing fire", 10, 7, "lion-skin")
+Chimera.show()
+
+class Hydra(Enemy):
     def show(self):
-        print("I am a {}".format(self.name))
+        print("I am {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop a {}".format(self.Itemdrop))
+
+Hydra = Hydra("hydra", 80, "spitting poison", 10, 5, "potion of poison")
+Hydra.show()
+
+class Mermaid(Enemy):
+    def show(self):
+        print("I am {}".format(self.name))
         print("I have {} health".format(self.health))
         print("My main attack is {}".format(self.mainattack))
         print("I do {} damage".format(self.attackdamage))
         print("I drop {} XP".format(self.XPdrop))
         print("I drop {}".format(self.Itemdrop))
 
-Griffin = Griffin("griffin", 75, "Swoop", 4, 3, "Feathers")
-Griffin.show()
+Mermaid = Mermaid("mermaid", 60, "charmspeak", 0, 1, "scales")
+Mermaid.show()
 
+class Merman(Enemy):
+    def show(self):
+        print("I am {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
+
+Merman = Merman("merman", 60, "jabbing with trident", 5, 1.5, "scales")
+Merman.show()
+
+class Kraken(Enemy):
+    def show(self):
+        print("I am {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
+
+Kraken = Kraken("kraken", 100, "lashing out with tentacles", 8, 7, "slime")
+Kraken.show()
 
 class Hero(Entity):
     def show(self):
@@ -88,7 +206,7 @@ class Hero(Entity):
         print("{}".format(self.skill4))
         print("{}".format(self.skill5))
 
-y = Hero (f"Adam", 90, 18, 18, 18, 20, 16, "Stab", 8, "holy sword", "stabbing", "punching", "parrying", "blocking", "dodging")
+y = Hero (f"Adam", 100, 18, 18, 18, 20, 16, "Stab", 8, "holy sword", "stabbing", "punching", "parrying", "blocking", "dodging")
 y.show()
 
 class MainPlayer(Entity):
@@ -111,8 +229,8 @@ class MainPlayer(Entity):
         print("{}".format(self.skill5))
     
     
-z = MainPlayer (f"Adonis", 55, 5, 6, 16, 7, 6, "Kick", 2, "skeleton bone", "Dodging", "Blocking", "Running", "Kicking", "Punching")
-y.show()
+z = MainPlayer (f"Adonis", 45, 5, 6, 16, 7, 6, "Kick", 2, "skeleton bone", "Dodging", "Blocking", "Running", "Kicking", "Punching")
+z.show()
 
 '''class Entity:
     def __init__(self, name, health, main_attack, weapon):
@@ -123,7 +241,7 @@ y.show()
 '''
 
 def attack(self, target):
-    damage = self.main_attack + self.weapon.damage
+    damage = self.mainattack + self.attackdamage
     target.take_damage(damage)
     print(f"{self.name} attacks {target.name} with {self.weapon.name} causing {damage} damage.")
 

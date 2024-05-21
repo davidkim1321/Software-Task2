@@ -2,14 +2,22 @@ import tkinter as tk
 from tkinter import ttk
 
 class Entity:
-    def __init__(self, name: str, health: int, attack: int, e_weapon: str, e_armour:str, skill1: str, skill2: str, skill3: str, skill4: str, skill5:str):
+    def __init__(self, name: str, health: int, strength: int, stamina: int, agility: int, intelligence: int, resistance: int, mainattack: str, attackdamage: int, weapon: str, skill1: str, skill2: str, skill3: str, skill4: str, skill5: str, XPdrop: int, Itemdrop: str):
         self.name = name
         self.health = health
-        self.attack = attack
+        self.strength = strength
+        self.stamina = stamina
+        self.agility = agility
+        self.intelligence = intelligence
+        self.resistance = resistance
+        self.mainattack = mainattack
+        self.attackdamage = attackdamage
         self.is_alive = True
-        self.equipped_weapon = e_weapon
-        self.equipped_armour = e_armour
+        self.equipped_weapon = weapon
         self.skills = [skill1,skill2,skill3,skill4,skill5]
+    
+    skill1 = "Punch"
+
 
         
 
@@ -67,7 +75,7 @@ if __name__ == "__main__":
 class item:
 
 class Player(Entity):
-    def __init__(self, level, experience, strength, agility, uses):
+    def __init__(self, health, attack,  level, experience, strength, agility, uses):
         self.self_level = level
         self.self_experience = experience
         self.strength = strength
