@@ -30,7 +30,9 @@ class Enemy:
         self.is_alive = True
         self.XPdrop = XPdrop
         self.Itemdrop = Itemdrop
-    
+        
+
+class Siren(Enemy):
     def show(self):
         print("I am a {}".format(self.name))
         print("I have {} health".format(self.health))
@@ -39,21 +41,33 @@ class Enemy:
         print("I drop {} XP".format(self.XPdrop))
         print("I drop {}".format(self.Itemdrop))
 
-class Siren(Enemy):
-    def show(self):
-        Siren = Siren("siren", 50, "Enchanted songs", 0, 2, "Scales")
-        Siren.show()
+Siren = Siren("siren", 50, "Enchanted songs", 0, 2, "Scales")
+Siren.show()
          
 
 class Manticore(Enemy):
     def show(self):    
-        x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
-        x.show()
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
+
+x = Manticore("manticore", 85, "Poison Spike", 5, 5, "Poisonous Tail")
+x.show()
  
 class Griffin(Enemy):
     def show(self):
-        Griffin = Griffin("griffin", 75, "Swoop", 4, 3, "feathers")
-        Griffin.show()
+        print("I am a {}".format(self.name))
+        print("I have {} health".format(self.health))
+        print("My main attack is {}".format(self.mainattack))
+        print("I do {} damage".format(self.attackdamage))
+        print("I drop {} XP".format(self.XPdrop))
+        print("I drop {}".format(self.Itemdrop))
+        
+Griffin = Griffin("griffin", 75, "Swoop", 4, 3, "feathers")
+Griffin.show()
 
 class Minotaur(Enemy):
     def show(self):
